@@ -30,9 +30,9 @@ simulations, or simple local messaging between computers.
    git clone https://github.com/yourusername/NodeHopper.git
    cd NodeHopper
 
-2. Make sure you have **Python 3** installed.
+3. Make sure you have **Python 3** installed.
 
-3. (Optional) Install Tkinter if not included:
+4. (Optional) Install Tkinter if not included:
 
    # Debian/Ubuntu
    sudo apt install python3-tk
