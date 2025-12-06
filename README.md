@@ -27,8 +27,8 @@ simulations, or simple local messaging between computers.
 ----------------------------------------------------------
 1. Clone the repository:
 
-   git clone https://github.com/yourusername/NodeHopper.git
-   cd NodeHopper
+    git clone https://github.com/yourusername/NodeHopper.git](https://github.com/X-PRODA/NodeHopper.git)
+    cd NodeHopper
 
 3. Make sure you have **Python 3** installed.
 
