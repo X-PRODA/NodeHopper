@@ -3,7 +3,7 @@
          Multi-Hop Messaging System in Python
 ==========================================================
 
-#📌 Description:
+📌 Description:
 NodeHopper is a lightweight, cross-platform Python program that allows you
 to send messages through a chain of nodes from a sender to a receiver. 
 You can use it via a **Command-Line Interface (CLI)** or a **Graphical Interface (GUI)**.
@@ -11,9 +11,9 @@ You can use it via a **Command-Line Interface (CLI)** or a **Graphical Interface
 Messages "hop" from node to node, making it ideal for testing network routing, 
 simulations, or simple local messaging between computers.
 
-#----------------------------------------------------------
-#✨ Features:
-#----------------------------------------------------------
+----------------------------------------------------------
+✨ Features:
+----------------------------------------------------------
 - CLI Mode: sender, node, receiver
 - GUI Mode with Tkinter
 - Multi-hop message relay through intermediate nodes
@@ -22,9 +22,9 @@ simulations, or simple local messaging between computers.
 - Minimal dependencies, easy to set up
 - Auto-launch GUI when no arguments are provided
 
-#----------------------------------------------------------
-#💻 Installation:
-#----------------------------------------------------------
+----------------------------------------------------------
+💻 Installation:
+----------------------------------------------------------
 1. Clone the repository:
 
    git clone https://github.com/yourusername/NodeHopper.git
@@ -37,40 +37,38 @@ simulations, or simple local messaging between computers.
    # Debian/Ubuntu
    sudo apt install python3-tk
 
-#----------------------------------------------------------
-#🚀 Usage:
-#----------------------------------------------------------
+----------------------------------------------------------
+🚀 Usage:
+----------------------------------------------------------
 
-#GUI Mode (Recommended for beginners):
-#------------------------------------
+GUI Mode (Recommended for beginners):
+------------------------------------
 - Windows:
   1. Run the GUI directly:
      python nodehopper.py
   2. Or use the included `.bat` script:
      nodehopper.bat
-  3. To make it runnable from anywhere:
+  3. To make it usable from anywhere:
      - Place `nodehopper.bat` in a folder, e.g., `C:\Users\YourUser\Scripts`
-     - Add that folder to the **PATH** environment variable:
-       1. Press **Win + R**, type `sysdm.cpl` → Enter  
-       2. Go to **Advanced → Environment Variables**  
-       3. Under **User variables**, select **Path** → Edit → New  
-       4. Add the folder path (e.g., `C:\Users\YourUser\Scripts`)  
-       5. Click OK and open a **new CMD** or PowerShell  
-     - Now you can run NodeHopper GUI from anywhere:
+     - Add that folder to the **PATH** environment variable
+     - Open a new CMD or PowerShell and type:
        nodehopper
 
-  - Linux:
+- Linux:
   1. Make the script executable:
      chmod +x nodehopper.sh
-  2. Move or copy the script to a folder in your PATH, e.g.:
-     sudo mv nodehopper.sh /usr/local/bin/nodehopper
-  3. Ensure it is executable:
-     sudo chmod +x /usr/local/bin/nodehopper
-  4. Now you can run it from any folder:
-     nodehopper
+  2. Run the script:
+     ./nodehopper.sh
+  3. Or run directly with Python:
+     python3 nodehopper.py
+  4. To make it usable from anywhere:
+     - Move `nodehopper.sh` to a folder in your PATH, e.g. `/usr/local/bin/`
+     - Make sure it’s executable: chmod +x /usr/local/bin/nodehopper
+     - Now you can type:
+       nodehopper
 
-#CLI Mode:
-#---------
+CLI Mode:
+---------
 1️⃣ Receiver:
    python nodehopper.py receiver 5003
 
@@ -82,25 +80,64 @@ simulations, or simple local messaging between computers.
 
 💡 Tip: Use ports between **5000–5999** to avoid conflicts with system services.
 
-#----------------------------------------------------------
-#🌐 How it works:
-#----------------------------------------------------------
+Example chain:
+---------------
+- Node1 → 5001
+- Node2 → 5002
+- Receiver → 5003
+
+----------------------------------------------------------
+🛠 Scripts for Easy GUI Launch:
+----------------------------------------------------------
+**Windows (.bat):**
+-------------------
+1. Create a file named `nodehopper.bat` in the project folder (already included).  
+2. Content:
+
+   @echo off
+   python "%~dp0\nodehopper.py" gui
+   pause
+
+3. Double-click or run from CMD:
+   nodehopper.bat
+
+**Linux (.sh):**
+----------------
+1. Create a file named `nodehopper.sh` (already included).  
+2. Content:
+
+   #!/bin/bash
+   python3 "$(dirname "$0")/nodehopper.py" gui
+
+3. Make it executable:
+   chmod +x nodehopper.sh
+
+4. Run:
+   ./nodehopper.sh
+
+💡 Tip: Add the script to a folder in PATH to run from anywhere:
+   nodehopper
+
+----------------------------------------------------------
+🌐 How it works:
+----------------------------------------------------------
 1. Sender sends a message to the first node.
 2. Nodes forward the message to the next node in the chain.
 3. Receiver gets the final message and displays it.
 4. GUI mode shows messages in real time and displays your local IP automatically.
 
-#----------------------------------------------------------
-#📌 Notes:
-#----------------------------------------------------------
+----------------------------------------------------------
+📌 Notes:
+----------------------------------------------------------
 - GUI is simple, lightweight, and shows logs in real-time.
 - The receiver automatically detects your local IP so other devices can connect.
 - CLI mode is useful for automation, scripting, or headless systems.
-- Adding `.bat` or `.sh` to PATH allows launching NodeHopper from any folder.
+- The `.bat` and `.sh` scripts allow launching the GUI with a single command,
+  and can be made global by adding them to your PATH.
 
-#----------------------------------------------------------
-#📄 License:
-#----------------------------------------------------------
+----------------------------------------------------------
+📄 License:
+----------------------------------------------------------
 This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).  
 You are free to use, modify, and distribute it, as long as proper credit is given.
 
