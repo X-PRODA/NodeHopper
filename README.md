@@ -46,16 +46,16 @@ GUI Mode (Recommended for beginners):
 - Windows:
   1. Run the GUI directly:
      python nodehopper.py
-  2. Or use the included `.bat` script:
+  2. Or use the included `.bat` script in the **project folder**:
      nodehopper.bat
-  3. To make it runnable from anywhere:
-     - Place `nodehopper.bat` in a folder, e.g., `C:\Users\YourUser\Scripts`
-     - Add that folder to the **PATH** environment variable:
+     - `%~dp0` in the `.bat` ensures Python finds `nodehopper.py` in the same folder.
+  3. To run from any folder:
+     - Add the **project folder** (where `.bat` and `.py` are) to your **PATH**:
        1. Press **Win + R**, type `sysdm.cpl` → Enter  
        2. Go to **Advanced → Environment Variables**  
        3. Under **User variables**, select **Path** → Edit → New  
-       4. Add the folder path (e.g., `C:\Users\YourUser\Scripts`)  
-       5. Click OK and open a **new CMD** or PowerShell  
+       4. Add the project folder path  
+       5. Click OK and open a new CMD or PowerShell  
      - Now you can run NodeHopper GUI from anywhere:
        nodehopper
 
