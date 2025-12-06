@@ -1,7 +1,7 @@
-==========================================================
+=
                      NodeHopper
          Multi-Hop Messaging System in Python
-==========================================================
+=
 
 📌 Description:
 NodeHopper is a lightweight, cross-platform Python program that allows you
